@@ -1,0 +1,298 @@
+/* Global ==================================== */ 
+
+/*Root referencia o html. */
+:root {
+    --dark-blue: #363f5f;
+    --green: #49aa26;
+    --light-green: #00ff00ea;
+}
+
+* {
+    margin: 0; /* retira todos os espaçamentos (Estou utilizando seletor universal) */
+    padding: 0; /*retira o espaçamento do elemento que fica dentro de uma "caixa".*/
+    box-sizing: border-box; /*"medida da caixa", reseta a contagem de aumento da caixa considerando o elemento interno, com o border-box o que será considerado é a borda da caixa para crescer melhor visualmente.*/
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    background: rgba(186, 174, 174, 0.806);
+    font-family: 'Gemunu Libre', sans-serif;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.container {
+    width: min(90vw, 800px);
+    margin: auto;
+}
+/* Titles ==================================== */ 
+h2 {
+    margin-top: 3.2rem;
+    margin-bottom: 0.8rem;
+    color: var(--dark-blue);
+    font-weight: normal;
+}
+
+/* Links & Buttons=========================== */ 
+a {
+    color: var(--green);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #3dd705;
+}
+
+
+button {
+    width: 100%;
+    height: 50px;
+
+    border: none;
+    
+    color: white;
+    background: var(--green);
+
+    padding: 0;
+    border-radius: 1.5rem;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--light-green);
+}
+
+.button.new {
+    display: inline-block;
+    margin-bottom: .8rem;
+    font-size: 1.5rem;
+}
+
+.button.cancel {
+    color: #f50f07e8;
+    border: 2px #f50f07e8 solid;
+    border-radius: 1.5rem;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.5;
+
+}
+
+.button.cancel:hover {
+    opacity: 1;
+}
+
+/*Header ==================================== */
+header {
+    background: #2d4a22;
+    padding: 2rem 0 10rem;
+    text-align: center;
+}
+
+#logo {
+    color: #fff;
+    font-weight: 100;
+}
+
+/*Balance ==================================== */
+
+#balance {
+    margin-top: -8rem;
+}
+
+#balance h2 {
+    color:#fff;
+    margin-top: 0;
+}
+/*Cards ==================================== */
+.card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    color: var(--dark-blue);
+    margin-bottom: 2rem;
+}
+
+.card h3 {
+    font-weight: normal;
+    font-size: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+}
+
+.card p {
+    font-size: 1.5rem;
+    line-height: 3rem;
+    margin-top: 1rem;
+}
+.card.total {
+    background: var(--green);
+    color: white;
+}
+/*Table ==================================== */
+#transaction { 
+    display: block;
+    width: 100%;
+
+    /* Para quando 'transbordar' se estiver acessando por um celular */
+    overflow: auto;
+}
+#data-table {
+    /*Pega 100% da box em que a tabela está dentro*/
+    width: 100%;
+    border-spacing: 0   0.5rem ;
+    color: #969cb3;
+}
+
+table thead th:first-child, table tbody td:first-child 
+{
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+table thead th:last-child, table tbody td:last-child 
+{
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+table thead th {
+    background: white;
+    font-weight: normal;
+    padding: 1rem 2rem;
+    text-align: left ; 
+}
+
+table tbody tr {
+    opacity: 0.7;
+}
+table tbody tr:hover {
+    opacity: 1;
+}
+
+table tbody td {
+    background: white;
+    padding: 1rem 2rem;    
+}
+
+td.description {
+    color: var(--dark-blue);
+}
+
+td.income {
+    color: #12a454;
+}
+
+td.expense {
+    color: #e92929;
+}
+
+/*Modal ===================================== */
+
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    background: #f0f2f5;
+    padding: 2.4rem;
+    position: relative;
+
+    z-index: 1;
+}
+
+/*Form   =================================== */
+
+#form {
+    max-width: 500px;
+}
+
+#form h2 {
+    margin-top: 0;
+}
+
+#form form input {
+    border: none;
+    border-radius: 0.2rem;
+
+    padding: 0.8;
+
+    width: 100%;
+}
+
+.input-group {
+    margin-top: 0.8rem;
+}
+
+.input-group small {
+    opacity: 0.4;
+}
+
+.input-group.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-group.actions .button, .input-group.actions button {
+    width: 48%;
+}
+
+/*Footer ==================================== */
+
+footer {
+    text-align: center;
+    padding: 4rem 0 2rem;
+    color: white;
+    opacity: 0.9;
+    background-color: #2d4a22;
+}
+
+/*Responsive ================================ */
+@media (min-width: 800px) {
+    html {
+        font-size: 87.5%;
+    }
+
+    #balance {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+    }
+
+}

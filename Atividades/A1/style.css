@@ -1,0 +1,127 @@
+/* Global ==================================== */ 
+
+/*Root referencia o html. */
+:root {
+    --dark-blue: #363f5f;
+}
+
+* {
+    margin: 0; /* retira todos os espaçamentos (Estou utilizando seletor universal) */
+    padding: 0; /*retira o espaçamento do elemento que fica dentro de uma "caixa".*/
+    box-sizing: border-box; /*"medida da caixa", reseta a contagem de aumento da caixa considerando o elemento interno, com o border-box o que será considerado é a borda da caixa para crescer melhor visualmente.*/
+}
+
+body {
+    background: rgba(186, 174, 174, 0.806);
+    font-family: 'Gemunu Libre', sans-serif;
+}
+
+.container {
+    width: min(90vw, 800px);
+    margin: 0 auto;
+}
+/* Titles ==================================== */ 
+h2 {
+    margin-top: 3.2rem;
+    margin-bottom: 0.8rem;
+    color: var(--dark-blue);
+    font-weight: normal;
+}
+
+/*Header ==================================== */
+header {
+    background: #2d4a22;
+    padding: 2rem 0 10rem;
+    text-align: center;
+}
+
+#logo {
+    color: #fff;
+    font-weight: 100;
+}
+
+/*Balance ==================================== */
+
+#balance {
+    margin-top: -8rem;
+}
+
+#balance h2 {
+    color:#fff;
+    margin-top: 0;
+}
+/*Cards ==================================== */
+.card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    color: var(--dark-blue);
+    margin-bottom: 2rem;
+}
+
+.card h3 {
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+.card p {
+    font-size: normal;
+    line-height: 3rem;
+    margin-top: 1rem;
+}
+.card.total {
+    background: #49aa26;
+    color: white;
+}
+/*Table ==================================== */
+#data-table {
+    /*Pega 100% da box em que a tabela está dentro*/
+    width: 100%;
+    border-spacing: 0   0.5rem ;
+    color: #969cb3; 
+}
+
+table thead th:first-child, table tbody td:first-child {
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+table thead th {
+    background: white;
+    font-weight: normal;
+    padding: 1rem 2rem;
+    text-align: left ; 
+}
+
+table tbody tr {
+    opacity: 0.7;
+}
+table tbody tr:hover {
+    opacity: 1;
+}
+
+table tbody td {
+    background: white;
+    padding: 1rem 2rem;    
+}
+
+td.description {
+    color: var(--dark-blue);
+}
+
+td.income {
+    color: #12a454;
+}
+
+td.expense {
+    color: #e92929;
+}
+
+/*Footer ==================================== */
+
+footer {
+    text-align: center;
+    padding: 4rem 0 2rem;
+    color: white;
+    opacity: 0.9;
+    background-color: #2d4a22;
+}
