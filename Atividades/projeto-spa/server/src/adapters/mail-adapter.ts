@@ -1,8 +1,8 @@
 export interface SendMailData {
-    subjetc: string;
+    subject: string;
     body: string;
 }
 
 export interface MailAdapter {
-    sendMail: (data: SendMailData) => Promisse<void>;
+    sendMail: (data: SendMailData) => Promise<void>;
 }
