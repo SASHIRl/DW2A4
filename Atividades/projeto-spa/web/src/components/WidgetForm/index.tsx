@@ -2,6 +2,7 @@ import { CloseButton } from "../CloseButton";
 import bugImageUrl from '../../assets/bug.svg';
 import ideaImageUrl from '../../assets/idea.svg';
 import thoughtImageUrl from '../../assets/thought.svg';
+import praiseImageUrl from '../../assets/Success.svg';
 import { useState } from "react";
 import { FeedbackTypeStep } from "./Steps/FeedbackTypeStep";
 import { FeedbackContentStep } from "./Steps/FeedbackContentStep";
@@ -29,6 +30,13 @@ export const feedbackTypes = {
             source: thoughtImageUrl,
             alt: 'Imagem de um balão de pensamento'
         },
+    },
+    ELOGIO: {
+        title: "Elogio",
+        image: {
+            source: praiseImageUrl,
+            alt: 'Imagem de um sinal de certo'
+        }
     },
 };
 
